@@ -1,0 +1,293 @@
+body,
+html{
+    margin: 0;
+    font-family: "Pixelify sans";
+}
+
+header{
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+main{
+    display: flex;
+}
+
+.colors-controls{
+    background-color: rgb(48, 48, 48);
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    border-right: 1px solid gray;
+    overflow: auto;
+}
+
+.border-control{
+    margin: 0 auto;
+    color: white;
+    font-size: 30px;
+}
+
+#borders-check{
+    display: none;
+}
+
+.borders-check-label{
+    border: 1px solid gray;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.borders-check-label:hover{
+    background-color: white;
+    box-shadow: 0 0 5px 1px white;
+    color: rgb(48, 48, 48);
+    border-radius: 25px;
+}
+
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: auto;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+    height: 200px;
+    border-bottom: 1px solid gray;
+}
+
+.to-add-color-popup-button{
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 60px;
+    font-family: inherit;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 1px white;
+    background-color: inherit;
+    font-size: 20px;
+    color: white;
+    transition: 0.5s;
+}
+
+.to-add-color-popup-button:hover{
+    background-color: white;
+    color: rgb(15, 15, 15);
+}
+
+.color{
+    list-style: none;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.work-area{
+    background-color:rgb(48, 48, 48);
+    width: 80%;
+    padding-left: 20px;;
+}
+
+.cells-36{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(6, 140px);
+    margin: 0;
+}
+
+.cells-72{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 105px);
+    grid-template-rows: repeat(8, 105px);
+    margin: 0;
+}
+
+.cells-144{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 70px);
+    grid-template-rows: repeat(12, 70px);
+    margin: 0;
+}
+
+.cells-289{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(17, 49px);
+    grid-template-rows: repeat(17, 49px);
+    margin: 0;
+}
+
+.cell{
+    background-color: rgb(212, 212, 212);
+    list-style: none;
+}
+
+.cell-border{
+    border: 1px solid gray;
+}
+
+.quantity-values-list{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    align-content: flex-start;
+}
+
+.quantity-value-item{
+    flex-grow: 1;
+    flex-basis: 100%;
+    align-self: flex-start;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.quantity-value-item:hover{
+    background-color: black;
+    color: white;
+}
+
+.add-color-popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+.add-color-modal span{
+    position: absolute;
+    right: 5px;
+    top: 5px;;
+    color: white;
+    font-size: 50px;
+    cursor: default;
+}
+
+.add-color-modal{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 1px white;
+    width: 20%;
+    padding: 70px;
+}
+
+.add-color-input{
+    display: block;
+    width: 100%;
+}
+
+.to-add-color-button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 15px;
+    font-family: inherit;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 1px white;
+    background-color: inherit;
+    font-size: 20px;
+    color: white;
+    transition: 0.5s;
+}
+
+.to-add-color-button:hover{
+    background-color: white;
+    color: rgb(15, 15, 15);
+}
+
+#eraser{
+    display: none;
+}
+
+.eraser-control{
+    text-align: center;
+    display: inline-block
+}
+
+.eraser-label{
+    padding: 10px;
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.eraser-label:hover{
+    background-color: white;
+    color: rgb(15, 15, 15);
+    box-shadow: 0 0 5px 1px white;
+    border-radius: 20px; 
+}
+
+footer{
+    padding: 80px;
+    background-color:rgb(12, 12, 12);
+    border-top: 2px solid gray;
+
+}
+
+.active{
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-color: white;
+    box-shadow: 0 0 5px 3px white;
+}
+
+.active-quantity{
+    background-color: black;
+    color: white;
+}
+
+.active-eraser{
+    background-color: white;
+    color: rgb(15, 15, 15);
+    box-shadow: 0 0 5px 1px white;
+    border-radius: 20px; 
+}
+
+.none-display{
+    display: none;
+}
+
+.open{
+    display: block;
+}
